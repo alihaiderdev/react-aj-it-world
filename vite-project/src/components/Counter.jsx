@@ -14,7 +14,11 @@ const Counter = () => {
         //     return prevValue + 1
         // });
         // OR 
+        // if (count === 5) {
+        //     throw new Error('I crashed!');
+        // }
         setCount((prevValue) => prevValue + 1);
+
         // console.log("count add", count);
     }
 
@@ -37,7 +41,7 @@ const Counter = () => {
             <button onClick={add}>Add</button>
             {count}
             <button onClick={subtract}>Subtract</button>
-         
+
         </div>
     )
 }
