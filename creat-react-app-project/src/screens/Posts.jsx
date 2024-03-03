@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useFetch } from '../hooks/useFetch'
 import PostCard from '../components/PostCard';
 
 const Posts = () => {
-    const { data, isLoading, error } = useFetch('https://jsonplaceholder.typicode.com/posts')
+    const { data, isLoading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
+
+    useEffect(() => {
+        console.log("useEffect");
+        return () => {
+            console.log("cleanups");
+        }
+    }, [])
+
     // console.log({ data, isLoading, error });
     // if (isLoading) {
     //     return <h1>Loading...</h1>
